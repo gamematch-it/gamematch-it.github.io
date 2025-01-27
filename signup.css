@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #d6e8f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #333;
+}
+
+.login-container {
+  background: #ffffff;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.welcome-section {
+  background: linear-gradient(to bottom, #d6e8f7, #d6e8f7);
+  padding: 30px;
+  text-align: center;
+  color: #333;
+}
+
+.welcome-section h1 {
+  font-size: 22px;
+  margin: 0 0 10px;
+}
+
+.welcome-section p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.login-form {
+  padding: 20px;
+  text-align: center;
+}
+
+.login-form h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.input-container {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.input-container::before {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #b0b0a8;
+  font-size: 16px;
+  pointer-events: none;
+}
+
+.input-container:first-child::before {
+  content: "\f007";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.input-container:nth-child(2)::before {
+  content: "\f023";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 10px 10px 10px 35px;
+  border: 1px solid #e4e4df; 
+  border-radius: 5px;
+  font-size: 14px;
+  color: #333;
+  box-sizing: border-box;
+}
+
+.input-container input::placeholder {
+  color: #aaa;
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin: 10px 0 20px;
+  color: #666;
+  flex-wrap: wrap;
+}
+
+.form-options a {
+  color: #a6a6a0;
+  text-decoration: none;
+}
+
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background: #d6e8f7;
+  border: none;
+  border-radius: 5px;
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background: #c4d8ef;
+}
+
+.signup-option {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+}
+
+.signup-option a {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signup-option a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .welcome-section h1 {
+    font-size: 20px;
+  }
+
+  .welcome-section p {
+    font-size: 12px;
+  }
+
+  .input-container input {
+    font-size: 12px;
+  }
+
+  .login-button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .signup-option {
+    font-size: 12px;
+  }
+}

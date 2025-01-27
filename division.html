@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Division</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: white; /* Set the background color of the body to white */
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background-color: #f8f3d6; /* Set the container background color to #f8f3d6 */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 650px; /* Container max width */
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 180px repeat(4, 100px);
+            grid-template-rows: repeat(3, 100px);
+            gap: 10px;
+        }
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+        .operations-box {
+            background-color: #ef601e;
+            grid-row: span 3;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .operation {
+            font-size: 100px;
+            font-weight: bold;
+            color: black;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 5px;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+        }
+        .button-box {
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .button {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background-color: transparent;
+            font-size: 20px;
+            font-weight: bold;
+            color: black;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .button .lock {
+            font-size: 24px;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr 1fr; /* Two columns for medium screens */
+                grid-template-rows: auto;
+            }
+            .operations-box {
+                grid-column: span 2; /* Span across two columns */
+            }
+        }
+        @media (max-width: 480px) {
+            .grid-container {
+                grid-template-columns: 1fr; /* Single column for small screens */
+            }
+            .operations-box {
+                grid-column: span 1; /* Take full width */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="grid-container">
+            <div class="box operations-box">
+                <button class="operation">÷</button>
+            </div>
+            <!-- Buttons 1-12 -->
+            <div class="box button-box">
+                <button class="button">
+                    1<br>
+                    <span class="lock">🔒</span>
+                </button>
+            </div>
+            <div class="box button-box">
+                <button class="button">
+                    2<br>
+                    <span class="lock">🔒</span>
+                </button>
+            </div>
+            <div class="box button-box">
+                <button class="button">
+                    3<br>
+                    <span class="lock">🔒</span>
+                </button>
+            </div>
+            <div class="box button-box">
+                <button class="button">
+                    4<br>
+                    <span class="lock">🔒</span>
+                </button>
+            </div>
+            <div class="box button-box">
+                <button class="button">
+                    5<br>
+                    <span class="lock">🔒</span>
+                </button>
+            </div>
+            <div class="box button-box">
+                <button class="button">
+                    6<br>
+                    <span class="lock">🔒</span>
+                </button>
+            </div>
+            <div class="box button-box">
+                <button class="button">
+                    7<br>
+                    <span class="lock">🔒</span>
+                </button>
+            </div>
+            <div class="box button-box">
+                <button class="button">
+                    8<br>
+                    <span class="lock">🔒</span>
+                </button>
+            </div>
+            <div class="box button-box">
+                <button class="button">
+                    9<br>
+                    <span class="lock">🔒</span>
+                </button>
+            </div>
+            <div class="box button-box">
+                <button class="button">
+                    10<br>
+                    <span class="lock">🔒</span>
+                </button>
+            </div>
+            <div class="box button-box">
+                <button class="button">
+                    11<br>
+                    <span class="lock">🔒</span>
+                </button>
+            </div>
+            <div class="box button-box">
+                <button class="button">
+                    12<br>
+                    <span class="lock">🔒</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Main Menu</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: white;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-decoration: none;
+            background-color: #fdf6e3;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+        .grid-container {
+            text-decoration: none;
+            display: grid;
+            grid-template-columns: 180px repeat(3, 120px);
+            grid-template-rows: repeat(2, 150px);
+            gap: 10px;
+        }
+        .box {
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .button {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            font-size: 24px;
+            font-weight: bold;
+            border: none;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        .button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        }
+        .operations-box {
+            grid-row: span 2;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .plus-orange { background-color: #caaacd; }
+        .minus-pink { background-color: #dc3993; }
+        .magnify-orange { background-color: #f2994a; }
+        .question-cream { background-color: #fde5c6; }
+        .divide-teal { background-color: #ef601e; }
+        .multiply-blue { background-color: #8997f7; }
+        .magnify-orange .button, .question-cream .button {
+            color: black;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: auto;
+            }
+            .operations-box {
+                grid-column: span 2;
+            }
+        }
+        @media (max-width: 480px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+            }
+            .operations-box {
+                grid-column: span 1;
+            }
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #fdf6e3; /* Blue */
+            color: #fff;
+            padding: 15px 20px;
+            display: flex;
+            text-decoration: none;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000; /* Ensure it's always on top */
+            }
+        nav a {
+            text-decoration: none;
+            color: #000; /* Ensures the links inherit the text color from the nav */
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-links">
+          <a href="index.html" id="home-link" onclick="showPage('home')">Home</a>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="grid-container">
+            <a href="random.html" class="box operations-box">
+                <button class="button">Randomized</button>
+            </a>
+            <a href="addition.html" class="box plus-orange">
+                <button class="button">+</button>
+            </a>
+            <a href="subtraction.html" class="box minus-pink">
+                <button class="button">−</button>
+            </a>
+            <a href="#" class="box magnify-orange">
+                <button class="button">🔍</button>
+            </a>
+            <a href="division.html" class="box divide-teal">
+                <button class="button">÷</button>
+            </a>
+            <a href="multiplication.html" class="box multiply-blue">
+                <button class="button">×</button>
+            </a>
+            <a href="#" class="box question-cream">
+                <button class="button">?</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
