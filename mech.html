@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match-it Mechanics</title>
+    <style>
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    font-family: 'Arial', sans-serif;
+}
+
+.mechanics-card {
+    background-color: #fff9e6;
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.mechanics-card h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    font-family: 'Comic Sans MS', 'Arial', sans-serif;
+}
+
+.content {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.icon-container {
+    background-color: #ff6f61;
+    border-radius: 10px;
+    width: 80px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.magnifying-glass {
+    font-size: 50px;
+    color: white;
+}
+
+.instructions p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+}
+    </style>
+</head>
+<body>
+    <div class="mechanics-card" onclick="showAlert()">
+        <h2>Mechanics</h2>
+        <div class="content">
+            <div class="icon-container">
+                <span class="magnifying-glass">🔍</span>
+            </div>
+            <div class="instructions">
+                <p>1. Drag and drop the matchsticks to correct the equation.</p>
+                <p>2. Quick response will score bonus points.</p>
+                <p>3. Achieve many titles.</p>
+            </div>
+        </div>
+    </div>
+
+<script>
+  function showAlert() {
+  alert("Let's start the game! Drag and drop the matchsticks to correct the equation.");
+}
+</script>  
+</body>
+</html>
